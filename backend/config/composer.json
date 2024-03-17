@@ -1,0 +1,11 @@
+{
+    "name": "quickshop/backend",
+    "description": "An e-commerce backend system for managing products, orders, and user authentication for QuickShop.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Quickshop\\Backend\\": "src/"
+        }
+    },
+    "require": {}
+}
