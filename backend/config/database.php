@@ -2,8 +2,8 @@
 // Database configuration
 $host = '127.0.0.1';
 $db   = 'QuickShop';
-$user = 'your_username';
-$pass = 'your_password';
+$user = 'root';
+$pass = '';
 $charset = 'utf8mb4';
 
 // Data Source Name
