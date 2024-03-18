@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Our Products</h1>
+    <div>
+        <a href="order_history.php">View Order History</a> | <a href="update_profile.php">Update Your Profile</a>
+    </div>
     <div class="product-list">
         <?php
       // Absolute path to the project root directory
@@ -33,6 +36,8 @@ require_once $projectRoot . '/backend/config/database.php';
                 // If you want to display stock quantity
                 // echo "<p>Stock: " . htmlspecialchars($row["StockQuantity"]) . "</p>";
                 echo "</div>";
+                
+                
             }
         } else {
             echo "0 results found.";

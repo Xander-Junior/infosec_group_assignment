@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     header('Location: ../../frontend/inventory_dashboard.php');
                     break;
                 case 'Customer':
-                    header('Location: ../../frontend/customer_dashboard.php');
+                    header('Location: ../../frontend/products.php');
                     break;
                 default:
                     // Handle unexpected role
