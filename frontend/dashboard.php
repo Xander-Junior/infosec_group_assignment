@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - QuickShop</title>
-    <link rel="stylesheet" href="path/to/your/materialize/css/materialize.min.css"> <!-- Adjust path as necessary -->
-    <script src="path/to/your/materialize/js/materialize.min.js"></script> <!-- Adjust path as necessary -->
+    
     <link rel="stylesheet" href="dashboard.css"> <!-- Adjust path as necessary -->
 </head>
 <body>
@@ -20,13 +19,13 @@
 
 <nav role='navigation'>
   <ul class="main">
-    <li class="dashboard"><a href="admindashboard">Dashboard</a></li>
-    <li class="edit"><a href="#">Edit Website</a></li>
-    <li class="write"><a href="#">Write news</a></li>
-    <li class="comments"><a href="#">Ads</a></li>
-    <li class="users"><a href="#">Manage Users</a></li>
+    <li class="dashboard"><a href="dashboard.php">Dashboard</a></li>
+    <li class="users"><a href="./manage_users.php">Manage Users</a></li>
+    <li class="products"><a href="./manage_products.php"> Manage Products</a></li>
+    <li class="orders"><a href="./manage_orders.php">Manage Orders</a></li>
+
   </ul>
-</nav>
+</nav
 
 <main role="main">
   

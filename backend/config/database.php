@@ -1,9 +1,11 @@
 <?php
+
+
 // Load Composer's autoloader and environment variables
-require_once __DIR__ . '/../vendor/autoload.php'; // Adjust this path if necessary
+require_once '/Applications/XAMPP/xamppfiles/htdocs/infosec_group_assignment/vendor/autoload.php';
 
 // Initialize Dotenv library
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../..');
 $dotenv->load();
 
 // Database configuration using environment variables
