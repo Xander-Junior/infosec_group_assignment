@@ -10,7 +10,7 @@
 <div class="bg-img">
     <div class="content">
         <header>Login Form</header>
-        <form action="login.php" method="POST">
+        <form action="../backend/api/login.php" method="POST">
             <div class="field">
                 <span class="fa fa-user"></span>
                 <input type="text" name="email_or_phone" required placeholder="Email or Phone">
@@ -21,7 +21,7 @@
                 <span class="show">SHOW</span>
             </div>
             <div class="pass">
-                <a href="#">Forgot Password?</a>
+                <a href="signup.php">Sign Up</a>
             </div>
             <div class="field">
                 <input type="submit" value="LOGIN">

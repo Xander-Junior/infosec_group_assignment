@@ -1,3 +1,23 @@
+
+<?php
+session_start(); // Start the session at the very beginning
+
+// Access control: Check if the user is logged in and has the 'Administrator' role
+if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'Administrator') {
+    // Not an administrator, redirect to the login page
+    header('Location: index.php');
+    exit; // Important: prevent further script execution
+}
+
+// Your form processing logic here (if you're handling form submission on this page)
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Process your form data here
+    // Example: Insert a new post into the database
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

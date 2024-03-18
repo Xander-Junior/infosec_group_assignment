@@ -19,7 +19,7 @@
           <h1 class="sign-up__title">Sign up</h1>
           <p class="sign-up__descr">Welcome, please sign up to create your account.</p>
         </header>
-        <form action="signup.php" method="POST" class="sign-up__form form" novalidate>
+        <form action="../backend/api/register.php" method="POST" class="sign-up__form form" novalidate>
           <div class="form__row">
             <div class="input">
               <div class="input__container">
@@ -54,7 +54,7 @@
           </div>
           <div class="form__row">
             <div class="component component--primary form__button">
-              <button class="btn btn--regular" id="sign-up-button">Sign Up</button>
+              <button class="btn btn--regular" id="sign-up-button" type="submit">Sign Up</button>
             </div>
           </div>
           <div class="form__row sign-up__sign">

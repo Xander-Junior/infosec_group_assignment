@@ -10,8 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $emailOrPhone = $_POST['email_or_phone'];
     $password = $_POST['password'];
 
-    // SQL query to fetch the user by email or phone
-    $sql = "SELECT * FROM Users WHERE email = :emailOrPhone OR phone = :emailOrPhone";
+    // Adjusted SQL query to fetch the user by email or phone along with their role
+// Adjusted SQL query to fetch the user by email
+    $sql = "SELECT UserID, email, password, Role FROM Users WHERE email = :emailOrPhone";
 
     // Prepare statement
     $stmt = $pdo->prepare($sql);
@@ -30,10 +31,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verify the password
         if (password_verify($password, $user['password'])) {
             // Password is correct, start user session
-            $_SESSION['user_id'] = $user['UserID']; // It's safer to store user ID in session
-            $_SESSION['user_email'] = $user['email']; // Storing email as well for ease of use
-            // Redirect to dashboard or return success response
-            header('Location: dashboard.php');
+            $_SESSION['user_id'] = $user['UserID'];
+            $_SESSION['user_email'] = $user['email'];
+            $_SESSION['user_role'] = $user['Role']; // Store user role in session
+
+            // Redirect based on role
+            switch ($_SESSION['user_role']) {
+                case 'Administrator':
+                    header('Location: ../../frontend/dashboard.php');
+                    break;
+                case 'Sales Personnel':
+                    header('Location: ../../frontend/sales_dashboard.php');
+                    break;
+                case 'Inventory Manager':
+                    header('Location: ../../frontend/inventory_dashboard.php');
+                    break;
+                case 'Customer':
+                    header('Location: ../../frontend/customer_dashboard.php');
+                    break;
+                default:
+                    // Handle unexpected role
+                    echo "Access Denied.";
+                    break;
+            }
             exit;
         } else {
             // Authentication failed: wrong password
